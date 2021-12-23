@@ -2,8 +2,7 @@ package C01.Testing_P2;
 
 public class Main {
 	
-	
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 
 		int plazas = 50;
 		int casos = 256;
