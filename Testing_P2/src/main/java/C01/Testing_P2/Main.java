@@ -9,14 +9,11 @@ public class Main {
 		
 		Pasajero pasajero = new Pasajero(78, false, false, false, false);
 		CalcularPrecio p = new CalcularPrecio();
+			
+		double precio;
 		
-		int nivel = p.calcularNivel(casos);
+		precio = p.CalcularPrecioBillete(0, 20, true, false, false, false, 20, p.calcularPlazasNormales(20, 0));
 		
-		int plazasN = p.calcularPlazasNormales(plazas, nivel);
-		
-		
-		double precio = p.CalcularPrecioBillete(nivel, pasajero.getEdad(), pasajero.isProfesional(),
-					pasajero.isEnfermo(), pasajero.isSintomas(), pasajero.isContactoReciente(), plazas, plazasN);
 		//Imprime el resultado
 		if (precio != 0) System.out.println("El precio final es "+ precio);
 		else {System.out.println("No se puede vender");}
